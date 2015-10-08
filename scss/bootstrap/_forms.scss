@@ -114,10 +114,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: $padding-base-vertical $padding-base-horizontal;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
+  padding: 9px 20px;
+  font-size: 16px;
+  line-height: 20px;
   color: $input-color;
   background-color: $input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -155,6 +154,13 @@ output {
 // Reset height for `textarea`s
 textarea.form-control {
   height: auto;
+}
+
+
+.red {
+  .form-control {
+    border-color: #ff0000;
+  }
 }
 
 
@@ -208,6 +214,12 @@ input[type="search"] {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+
+  label {
+	  width: 100%;
+	  display: block;
+	  font-weight: 400;
+  }
 }
 
 

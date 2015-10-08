@@ -72,10 +72,12 @@ a.btn {
 }
 // Success appears as green
 .btn-success {
+  @include button-size(9px, 20px, 16px, 20px, 3px);
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
 }
 // Info appears as blue-green
 .btn-info {
+  @include button-size(9px, 20px, 16px, 20px, 3px);
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
 // Warning appears as orange

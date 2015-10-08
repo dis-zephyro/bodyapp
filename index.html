@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="js/vendor/jquery.fullPage/jquery.fullPage.css">
-        <link rel="stylesheet" href="js/vendor/jquery.fancybox/jquery.fancybox.css">
+
 
         <link rel="stylesheet" href="css/main.css">
 
@@ -22,7 +22,7 @@
         <header class="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4 col-md-2 col-lg-2">
+                    <div class="col-sm-4 col-md-2 col-lg-2 hidden-xs">
                         <img class="header__logo img-responsive" src="img/logo.png" alt="">
                     </div>
                     <div class="col-sm-8 col-md-5 col-lg-5">
@@ -34,7 +34,9 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse">меню</a>
+                                <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <img class="img-responsive" src="img/logo.png" alt="">
+                                </a>
                             </div>
                             <div class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
@@ -57,7 +59,7 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 <div class="header__tel">(499)502-51-46</div>
-                                <a class="btn-callback popup" href="#callback">заказать звонок</a>
+                                <a class="btn-callback popup" data-toggle="modal" data-target=".modal-callback">заказать звонок</a>
                             </div>
                         </div>
                     </div>
@@ -80,7 +82,7 @@
                                 <div class="product__slogan">ЖЕЛЕЗНЫЙ. КРАСИВЫЙ. ЭФФЕКТИВНЫЙ.</div>
                                 <div class="product__price">1490 рублей</div>
                                 <div class="product__num">в наличии на складе > 50 шт</div>
-                                <a href="#" class="btn btn-blue"><span>КУПИТЬ</span> в 1 клик</a>
+                                <button class="btn btn-blue" data-toggle="modal" data-target=".modal-product-one"><span>КУПИТЬ</span> в 1 клик</button>
                                 <div class="product__sup">* Гарантируем конфиденциальность ваших данных</div>
                             </div>
                             <div class="col-sm-6 col-md-7">
@@ -111,7 +113,7 @@
 
                                 <div class="product__price">2490 рублей</div>
                                 <div class="product__num">в наличии на складе > 50 шт</div>
-                                <a href="#" class="btn btn-blue"><span>КУПИТЬ</span> в 1 клик</a>
+                                <button  data-toggle="modal" data-target=".modal-product-two" class="btn btn-blue"><span>КУПИТЬ</span> в 1 клик</button>
                                 <div class="product__sup">* Гарантируем конфиденциальность ваших данных</div>
                             </div>
                             <div class="col-sm-6 col-md-7">
@@ -141,7 +143,7 @@
 
                                 <div class="product__price">3500  рублей</div>
                                 <div class="product__num"> </div>
-                                <a href="#" class="btn btn-blue"><span>КУПИТЬ</span> в 1 клик</a>
+                                <button  data-toggle="modal" data-target=".modal-product-three" class="btn btn-blue"><span>КУПИТЬ</span> в 1 клик</button>
                                 <div class="product__sup">* Гарантируем конфиденциальность ваших данных</div>
                             </div>
                             <div class="col-sm-6 col-md-7">
@@ -154,6 +156,20 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section3">
+                <div class="container">
+                    <div class="develery">
+                        <div class="title">Доставка и монтаж турников</div>
+                        <p>Мы можем привезти вам турник. У нас есть машина и курьер. Стоимость по Москве - 500р. В подмосковье 500р. + 10р./км от МКАД</p>
+                        <p>У нас есть монтажник с высшим образованием НИКОЛАЙ. Стоимость монтажа 1000р. (включен весь крепежь под ваш тип стены)</p>
+                        <p class="divider"> </p>
+                        <div class="text-center">
+                            <button  data-toggle="modal" data-target=".modal-product-choice" class="btn btn-blue"><span>ПРОСТО КУПИТЬ</span></button>
                         </div>
                     </div>
                 </div>
@@ -181,11 +197,192 @@
             </div>
         </footer>
 
+        <!-- callback -->
+        <div class="modal fade bs-example-modal-sm modal-callback" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Обратный звонок</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" name="form" method="POST" action="javascript:void(0);">
+                            <div class="form-group">
+                                <label class="name none required">
+                                    <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="phone none required">
+                                    <input type="text" name="phone" class="form-control" placeholder="Ваш телефон">
+                                </label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info btn-submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product One -->
+        <div class="modal fade bs-example-modal-sm modal-product-one" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Купить товар</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" name="form" method="POST" action="javascript:void(0);">
+                            <div class="form-group">
+                                <input type="text" name="product" class="form-control" value="Турник для дома усиленный" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label class="name none required">
+                                    <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="phone none required">
+                                    <input type="text" name="phone" class="form-control" placeholder="Ваш телефон">
+                                </label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info btn-submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Two -->
+        <div class="modal fade bs-example-modal-sm modal-product-two" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Купить товар</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" name="form" method="POST" action="javascript:void(0);">
+                            <div class="form-group">
+                                <input type="text" name="product" class="form-control" value="Турник-брусья для дома" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label class="name none required">
+                                    <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="phone none required">
+                                    <input type="text" name="phone" class="form-control" placeholder="Ваш телефон">
+                                </label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info btn-submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Three -->
+        <div class="modal fade bs-example-modal-sm modal-product-three" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Купить товар</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" name="form" method="POST" action="javascript:void(0);">
+                            <div class="form-group">
+                                <input type="text" name="product" class="form-control" value="Турник Простой" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label class="name none required">
+                                    <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="phone none required">
+                                    <input type="text" name="phone" class="form-control" placeholder="Ваш телефон">
+                                </label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info btn-submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Choice -->
+        <div class="modal fade bs-example-modal-sm modal-product-choice" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Купить товар</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" name="form" method="POST" action="javascript:void(0);">
+                            <div class="form-group">
+                                <select name="select" class="form-control">
+                                    <option>Выберете турник</option>
+                                    <option>Турник для дома усиленный</option>
+                                    <option>Турник-брусья для дома</option>
+                                    <option>Турник Простой</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="name none required">
+                                    <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="phone none required">
+                                    <input type="text" name="phone" class="form-control" placeholder="Ваш телефон">
+                                </label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-info btn-submit">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Done  -->
+        <div class="modal fade bs-example-modal-sm modal-done" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Спасибо</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="done">Наш менеджер перезвонит вам в ближайшее время</div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js"></script>
+
         <script src="js/vendor/jquery.fullPage/jquery.fullPage.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/validator.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

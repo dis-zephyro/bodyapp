@@ -2443,10 +2443,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857;
+  padding: 9px 20px;
+  font-size: 16px;
+  line-height: 20px;
   color: #555555;
   background-color: #fff;
   background-image: none;
@@ -2477,6 +2476,9 @@ output {
 
 textarea.form-control {
   height: auto; }
+
+.red .form-control {
+  border-color: #ff0000; }
 
 input[type="search"] {
   -webkit-appearance: none; }
@@ -2527,6 +2529,10 @@ input[type="search"] {
     line-height: 46px; } }
 .form-group {
   margin-bottom: 15px; }
+  .form-group label {
+    width: 100%;
+    display: block;
+    font-weight: 400; }
 
 .radio,
 .checkbox {
@@ -2965,6 +2971,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
     background-color: #fff; }
 
 .btn-success {
+  padding: 9px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 3px;
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c; }
@@ -2994,6 +3004,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
     background-color: #fff; }
 
 .btn-info {
+  padding: 9px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 3px;
   color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da; }
@@ -5810,9 +5824,6 @@ html {
   font-size: 1em;
   line-height: 1.4; }
 
-body {
-  position: relative; }
-
 .container {
   position: relative; }
 
@@ -5838,9 +5849,9 @@ nav ul {
 
 @media (min-width: 1024px) {
   h2 {
-    font-size: 40px;
-    line-height: 50px;
-    margin-bottom: 0; } }
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 25px; } }
 .product {
   text-align: center; }
   .product .product__description {
@@ -5959,6 +5970,7 @@ nav ul {
     color: #5c5c5c;
     font-weight: 300;
     font-size: 16px;
+    cursor: pointer;
     text-decoration: underline; }
     .header .btn-callback:hover {
       color: #5c5c5c;
@@ -5993,6 +6005,8 @@ nav ul {
       display: none;
       color: #848484;
       font-weight: 500; }
+  .topnav .navbar-brand {
+    width: 150px; }
   .topnav .navbar-toggle {
     position: relative;
     float: right;
@@ -6037,11 +6051,24 @@ nav ul {
           .topnav .navbar-nav > li.active a {
             border-bottom-color: #292671; } }
 
+.develery {
+  font-size: 18px;
+  text-align: center; }
+  .develery .title {
+    color: #292671;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    text-transform: uppercase; }
+  .develery .divider {
+    height: 40px; }
+
 .btn-blue {
   color: #fff;
   border: none;
   outline: none;
   font-size: 18px;
+  cursor: pointer;
   line-height: 20px;
   padding: 10px 25px;
   background: #292671; }
@@ -6049,6 +6076,9 @@ nav ul {
     color: #fff;
     background: #433eb4;
     text-decoration: none; }
+  .btn-blue span {
+    cursor: pointer;
+    text-transform: uppercase; }
   @media (min-width: 768px) {
     .btn-blue {
       width: 100%;
@@ -6063,5 +6093,15 @@ nav ul {
       font-weight: 700;
       line-height: 55px;
       padding: 10px 25px; } }
+
+.modal-body {
+  padding-top: 25px; }
+  .modal-body .done {
+    font-size: 18px;
+    padding: 30px 0;
+    text-align: center; }
+
+.modal-footer {
+  text-align: center !important; }
 
 /*# sourceMappingURL=main.css.map */
