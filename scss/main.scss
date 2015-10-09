@@ -26,6 +26,11 @@ html {
 }
 
 body {
+    padding-top: 70px;
+
+    @media (min-width: $screen-sm-min) {
+        padding-top: 0;
+    }
 }
 
 .container {
@@ -129,6 +134,7 @@ nav ul {
 
     .product__image {
         position: relative;
+        margin-bottom: 30px;
     }
 
     .product__legend {
@@ -152,6 +158,7 @@ nav ul {
         .product__sup {
             font-size: 12px;
             margin-bottom: 0;
+            max-width: 436px;
         }
     }
 
@@ -161,6 +168,9 @@ nav ul {
             margin-bottom: 30px;
         }
 
+        .product__image {
+            margin-bottom: 0;
+        }
 
         .product__num {
             margin-bottom: 50px;
@@ -174,7 +184,7 @@ nav ul {
 }
 
 .footer {
-    padding: 25px 0;
+    padding: 10px 0;
     background: #fff;
 
     .footer__text {
@@ -229,12 +239,16 @@ nav ul {
 }
 
 .header {
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 50;
-    padding: 5px 0;
+    position: fixed;
+    padding: 5px 0 10px 0;
     background: #fff;
 
     .header__logo {
-        padding-top: 15px;
+        padding-top: 5px;
     }
 
     .header__tel {
@@ -258,15 +272,14 @@ nav ul {
     }
 
     @media (min-width: $screen-sm-min) {
-        top: 0;
-        left: 0;
-        right: 0;
-        position: fixed;
     }
 }
 
 .topnav {
-    margin-bottom: 20px;
+
+    &.mobile-nav {
+        display: none;
+    }
 
     .navbar-nav > li {
 
@@ -275,6 +288,8 @@ nav ul {
             font-size: 14px;
             line-height: 16px;
             text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
             background: transparent !important;
 
             span {
@@ -358,6 +373,9 @@ nav ul {
         }
     }
 
+    @media (min-width: $screen-lg-min) {
+        padding-top: 10px;
+    }
 }
 
 .develery {
@@ -436,6 +454,10 @@ nav ul {
     span {
         cursor: pointer;
         text-transform: uppercase;
+    }
+
+    &.btn-develery {
+        width: auto !important;
     }
 
 

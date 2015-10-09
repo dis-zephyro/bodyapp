@@ -1,0 +1,35 @@
+body {
+	padding-top: 100px;
+}
+
+.header {
+	border-bottom: 1px solid #adadad;
+}
+
+.topnav.desktop-nav {
+	display: none;
+}
+
+
+.topnav.mobile-nav {
+	 display: block;
+ }
+
+.section {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #adadad;
+}
+
+.footer {
+	bottom: auto !important;
+	position: relative !important;
+}
+
+
+@media (min-width: 768px) {
+
+	.topnav.mobile-nav {
+		padding-top: 10px;
+	}
+}

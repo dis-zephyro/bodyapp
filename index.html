@@ -6,10 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="js/vendor/jquery.fullPage/jquery.fullPage.css">
-
-
+        <link rel="stylesheet" type="text/css" href="js/vendor/jquery.fullPage/jquery.fullPage.css" />
         <link rel="stylesheet" href="css/main.css">
 
         <!--[if lt IE 9]>
@@ -26,7 +23,7 @@
                         <img class="header__logo img-responsive" src="img/logo.png" alt="">
                     </div>
                     <div class="col-sm-8 col-md-7 col-lg-7">
-                        <div class="topnav">
+                        <div class="topnav desktop-nav">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="sr-only">Toggle navigation</span>
@@ -34,11 +31,11 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-collapse">
+                                <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-one">
                                     <img class="img-responsive" src="img/logo.png" alt="">
                                 </a>
                             </div>
-                            <div class="navbar-collapse collapse">
+                            <div class="navbar-collapse collapse navbar-one">
                                 <ul class="nav navbar-nav">
                                     <li data-menuanchor="firstPage"><a href="#firstPage">Самый простой</a></li>
                                     <li data-menuanchor="secondPage"><a href="#secondPage">Попроще простого</a></li>
@@ -48,8 +45,31 @@
                                 </ul>
                             </div>
                         </div>
+
+                        <div class="topnav mobile-nav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-two">
+                                    <img class="img-responsive" src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="navbar-collapse collapse navbar-two">
+                                <ul class="nav navbar-nav">
+                                    <li data-menuanchor="firstPage"><a href="#section0">Самый простой</a></li>
+                                    <li data-menuanchor="secondPage"><a href="#section1">Попроще простого</a></li>
+                                    <li data-menuanchor="3rdPage"><a href="#section2">Простой</a></li>
+                                    <li data-menuanchor="4rdPage"><a href="#section3">Доставка и монтаж</a></li>
+                                    <li data-menuanchor="5rdPage"><a href="#section4">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-lg-3 hidden-sm text-center">
+                    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm text-center">
                         <div class="header__tel">(499)502-51-46</div>
                         <a class="btn-callback popup" data-toggle="modal" data-target=".modal-callback">заказать звонок</a>
                     </div>
@@ -157,7 +177,7 @@
                         <p>У нас есть монтажник с высшим образованием НИКОЛАЙ. Стоимость монтажа 1000р. (включен весь крепежь под ваш тип стены)</p>
                         <p class="divider"> </p>
                         <div class="text-center">
-                            <button  data-toggle="modal" data-target=".modal-product-choice" class="btn btn-blue"><span>КУПИТЬ</span> в 1 клик</button>
+                            <button  data-toggle="modal" data-target=".modal-product-choice" class="btn btn-blue btn-develery"><span>КУПИТЬ</span> в 1 клик</button>
                         </div>
                     </div>
                 </div>
@@ -183,14 +203,14 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2 col-lg-2">
+                    <div class="col-md-3 col-lg-3">
                         <div class="copy">
                             <span>2010-2015 © BodyApp.ru</span>
                             <span>ООО «Астром», ОГРН 1107746273524</span>
                             <span>производитель тренажеров для дома</span>
                         </div>
                     </div>
-                    <div class="col-md-10 col-lg-10">
+                    <div class="col-md-9 col-lg-9">
                         <div class="footer__text">
                             На этом сайте можно  КУПИТЬ ТУРНИК или посмотрет видео про КОТИКОВ. Здесь НЕТ липовых отзывов с довольными лицами клиентов,
                             миллионов наших преимуществ, и других 100% гарантий и чудо акций. Мы устали от сайтов похожишь на китайский магнитофон. Поэтому здесь все ПРОСТО.
@@ -386,12 +406,14 @@
         <div class="modal fade bs-example-modal-lg modal-video" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.youtube.com/embed/XuQ7nfglhKE" frameborder="0" allowfullscreen></iframe>
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div id="video-placeholder"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" id="pause" data-dismiss="modal">Закрыть</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -399,6 +421,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="js/vendor/jquery.fullPage/jquery.fullPage.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/validator.js"></script>
