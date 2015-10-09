@@ -1,10 +1,10 @@
 $(document).ready(function() {
     $('#page').fullpage({
-        responsiveHeight: 720,
+        responsiveHeight: 710,
         responsiveWidth: 768,
         navigation: true,
         navigationPosition: 'right',
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage', '5rdPage'],
         menu: '.navbar-nav',
         scrollingSpeed: 1000
     });
@@ -39,3 +39,18 @@ $(document).ready(function() {
         }
     });
 });
+
+
+// Подключние Яндекс-Карты
+
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map('map', {
+        center: [55.7647,37.7198],
+        zoom: 16,
+        controls: []
+    });
+
+    myMap.behaviors.disable('scrollZoom');
+}

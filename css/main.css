@@ -5838,6 +5838,10 @@ h2 {
   line-height: 30px;
   margin-bottom: 10px; }
 
+h3 {
+  font-size: 24px;
+  margin-bottom: 30px; }
+
 p {
   padding: 0;
   margin: 0 0 10px 0; }
@@ -5888,7 +5892,7 @@ nav ul {
   .product .product__image {
     position: relative; }
   .product .product__legend {
-    margin: 20px 0 0 0;
+    margin: 0 0 30px 0;
     padding: 0;
     list-style: none; }
     .product .product__legend li {
@@ -5901,25 +5905,12 @@ nav ul {
       text-align: left; }
       .product .product__sup {
         font-size: 12px;
-        margin-bottom: 0; }
-      .product .product__legend {
-        margin-left: 110px; } }
+        margin-bottom: 0; } }
   @media (min-width: 1024px) {
     .product .product__slogan {
-      margin-bottom: 50px; }
+      margin-bottom: 30px; }
     .product .product__num {
-      margin-bottom: 80px; }
-    .product .product__legend {
-      margin-top: -40px;
-      margin-left: 60px; }
-    .product.product03 .product__legend {
-      margin-left: 20px; } }
-  @media (min-width: 1250px) {
-    .product .product__legend {
-      margin-top: -80px;
-      margin-left: 110px; }
-    .product.product03 .product__legend {
-      margin-left: 60px; } }
+      margin-bottom: 50px; } }
 
 .footer {
   padding: 25px 0;
@@ -5937,6 +5928,8 @@ nav ul {
     line-height: 15px;
     margin-bottom: 25px;
     text-align: center; }
+    .footer .copy span {
+      display: block; }
   @media (min-width: 768px) {
     .footer {
       left: 0;
@@ -5950,10 +5943,11 @@ nav ul {
         line-height: 15px;
         text-align: center; }
         .footer .footer__text span {
-          text-transform: uppercase; }
-      .footer .copy {
-        margin-bottom: 0;
-        text-align: left; } }
+          text-transform: uppercase; } }
+  @media (min-width: 1024px) {
+    .footer .copy {
+      margin-bottom: 0;
+      text-align: left; } }
 
 .header {
   z-index: 50;
@@ -5975,19 +5969,6 @@ nav ul {
     .header .btn-callback:hover {
       color: #5c5c5c;
       text-decoration: none; }
-  .header .header__address {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    .header .header__address li {
-      color: #000;
-      font-size: 12px;
-      line-height: 14px;
-      font-weight: 300;
-      text-align: center; }
-      .header .header__address li a {
-        color: #000;
-        text-decoration: underline; }
   @media (min-width: 768px) {
     .header {
       top: 0;
@@ -5999,6 +5980,8 @@ nav ul {
   margin-bottom: 20px; }
   .topnav .navbar-nav > li > a {
     color: #000;
+    font-size: 14px;
+    line-height: 16px;
     text-align: center;
     background: transparent !important; }
     .topnav .navbar-nav > li > a span {
@@ -6043,12 +6026,14 @@ nav ul {
         display: table; }
         .topnav .navbar-nav > li {
           float: none;
-          display: table-cell; }
+          display: table-cell;
+          vertical-align: middle;
+          border-bottom: 3px solid transparent; }
           .topnav .navbar-nav > li > a {
-            border-bottom: 3px solid transparent; }
+            height: 100%; }
             .topnav .navbar-nav > li > a span {
               display: block; }
-          .topnav .navbar-nav > li.active a {
+          .topnav .navbar-nav > li.active {
             border-bottom-color: #292671; } }
 
 .develery {
@@ -6062,6 +6047,31 @@ nav ul {
     text-transform: uppercase; }
   .develery .divider {
     height: 40px; }
+
+.contact {
+  text-align: center; }
+  .contact .title {
+    color: #292671;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    text-transform: uppercase; }
+  .contact .address {
+    padding: 0;
+    list-style: none;
+    margin: 0 0 30px 0; }
+    .contact .address li {
+      color: #000;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 300;
+      text-align: center; }
+      .contact .address li a {
+        color: #000;
+        text-decoration: underline; }
+  .contact #map {
+    height: 300px;
+    margin-bottom: 30px; }
 
 .btn-blue {
   color: #fff;
